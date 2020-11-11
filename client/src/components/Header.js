@@ -10,16 +10,16 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href={'/auth/google'}>Login With Google</a>
+            <a href={'/auth/google'} style={{color:'#757575'}}>Login With Google</a>
           </li>
         );
       default:
         return [
           <li key="3" style={{ margin: '0 10px' }}>
-            <Link to="/blogs">My Blogs</Link>
+            <Link to="/blogs" style={{color:'#757575'}}>My Blogs</Link>
           </li>,
           <li key="2">
-            <a href={'/auth/logout'}>Logout</a>
+            <a href={'/auth/logout'} style={{color:'#757575'}}>Logout</a>
           </li>
         ];
     }
@@ -27,14 +27,14 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="indigo">
+      <nav className="N/A transparent" style={{ boxShadow:'none', }}>
         <div className="nav-wrapper">
           <Link
             to={this.props.auth ? '/blogs' : '/'}
             className="left brand-logo"
-            style={{ marginLeft: '10px' }}
+            style={{ marginLeft: '10px', color:'#263238',letterSpacing:'3px'}}
           >
-            Blogster
+            BLOGGY
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </div>
